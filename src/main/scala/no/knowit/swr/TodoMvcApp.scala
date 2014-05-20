@@ -17,6 +17,11 @@ class TodoMvcApp extends ScalatraServlet with JacksonJsonSupport {
     Store.getAll
   }
 
+  get("/:id") {
+    val id = params("id").toLong
+    Store.get(id)
+  }
+
   post("/") {
     val todo = parsedBody.extract[Todo]
     Store.save(todo)
