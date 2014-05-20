@@ -1,4 +1,4 @@
-import org.scalatra.example._
+import no.knowit.swr.TodoMvcApp
 import org.scalatra._
 import javax.servlet.ServletContext
 

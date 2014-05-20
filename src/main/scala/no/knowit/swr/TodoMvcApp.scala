@@ -2,6 +2,7 @@ package no.knowit.swr
 
 import org.scalatra._
 import org.json4s.{DefaultFormats, Formats}
+import org.scalatra.json._
 import no.knowit.swr.model.{Store, Todo}
 
 class TodoMvcApp extends ScalatraServlet with JacksonJsonSupport {
@@ -31,5 +32,5 @@ class TodoMvcApp extends ScalatraServlet with JacksonJsonSupport {
     val id = params("id").toLong
     Store.remove(id)
   }
-  
+
 }

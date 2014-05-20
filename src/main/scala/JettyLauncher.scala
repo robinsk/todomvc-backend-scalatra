@@ -10,7 +10,7 @@ object JettyLauncher {
     val context = new WebAppContext()
     context setContextPath "/"
     context.setResourceBase("src/main/webapp")
-    context.addServlet(classOf[org.scalatra.example.HerokuApp], "/*")
+    context.addServlet(classOf[no.knowit.swr.TodoMvcApp], "/*")
     context.addServlet(classOf[DefaultServlet], "/")
 
     server.setHandler(context)
